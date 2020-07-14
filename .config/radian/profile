@@ -1,0 +1,15 @@
+options(radian.color_scheme = "colorful")
+
+# either '"emacs"' or '"vi"'
+options(radian.editing_mode = "vi")
+
+options(radian.auto_match = TRUE)
+
+# highlight matching bracket
+options(radian.highlight_matching_bracket = TRUE)
+
+options(radian.complete_while_typing = TRUE)
+
+options(radian.completion_prefix_length = 2)
+
+
