@@ -1,0 +1,40 @@
+env:
+  TERM: xterm-256color
+
+font:
+ normal:
+   family: DelugiaCode NF
+
+ size: 12
+
+ use_thin_strokes: true #cant tell if this is working.
+
+colors:
+  primary:
+    background: '#12111e'
+    foreground: '#dde1e7'
+
+  normal:
+    black: '#1e1e1e'
+    red: '#ff6c6b'
+    green: '#dbf76a'
+    yellow: '#fad77b'
+    blue: '#7ba6fb'
+    magenta: '#8f82f9'
+    cyan: '#81f2f5'
+    white: '#f5f6f8'
+
+   #bright:
+    #black: '#1e1e1e'
+    #red: '#ff92d0'
+    #green: '#e0f880'
+    #yellow: '#fbdd8f'
+    #blue: '#93b8fe'
+    #magenta: '#aca3f9'
+    #cyan: '#bbf4f5'
+    #white: '#fbfbfc'
+
+background_opacity: 0.97
+
+window:
+  decorations: none
