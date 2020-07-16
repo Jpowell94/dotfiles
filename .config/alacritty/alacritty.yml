@@ -12,7 +12,7 @@ font:
 colors:
   primary:
     background: '#12111e'
-    foreground: '#dde1e7'
+    foreground: '#dfe2e8'
 
   normal:
     black: '#1e1e1e'
