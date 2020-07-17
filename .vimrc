@@ -38,7 +38,7 @@ autocmd FileType r         setlocal cc=80
 autocmd FileType r         setlocal shiftwidth=2 tabstop=2
 autocmd Filetype python    setlocal cc=79
 autocmd Filetype python    setlocal shiftwidth=4 tabstop=4
-autocmd Filetype yaml       setlocal cc=80
+autocmd Filetype yaml      setlocal cc=80
 
 
 "Customize Colors==============================================================
