@@ -29,7 +29,7 @@ syntax on
 "remove trailing whitespace from certain file types
 autocmd FileType r,rmarkdown,*.R,yaml autocmd BufWritePre <buffer> %s/\s\+$//e 
 
-"line length color bar for various file types
+"line length ruler and tab options
 autocmd FileType rmarkdown setlocal cc=80
 autocmd FileType ipynb     setlocal cc=79
 autocmd FileType vim       setlocal cc=80
