@@ -16,15 +16,18 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry
 
-"remove trailing whitespace from certain file types
-autocmd FileType r,rmarkdown,*.R,yaml autocmd BufWritePre <buffer> %s/\s\+$//e 
-
 "Longer update times lead to a worse user experience (supposedly)
 set updatetime=50
 
 set number
 
 syntax on
+
+
+"File type specific settings===================================================
+
+"remove trailing whitespace from certain file types
+autocmd FileType r,rmarkdown,*.R,yaml autocmd BufWritePre <buffer> %s/\s\+$//e 
 
 "line length color bar for various file types
 autocmd FileType rmarkdown setlocal cc=80
@@ -37,7 +40,8 @@ autocmd Filetype yaml       setlocal cc=80
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 
 
-"Customize Colors. For the drop down menu, 242 and 7 also work pretty well.
+"Customize Colors==============================================================
+
 highlight TablineFill ctermfg=0
 highlight Pmenu ctermfg=15 ctermbg=0 guibg=Black 
 highlight PmenuSel ctermfg=0 ctermbg=15 guibg=White
@@ -65,6 +69,9 @@ if (empty($TMUX))
   endif
 endif
 
+
+"Text, tab, and indent related=================================================
+
 " use <tab> for trigger completion
 " and navigate to the next complete item using coc
 function! s:check_back_space() abort
@@ -77,6 +84,13 @@ inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : <SID>check_back_space() 
 :set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+
+
+"Plugins=======================================================================
 
 call plug#begin()
 
