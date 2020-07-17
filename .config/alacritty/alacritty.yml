@@ -24,15 +24,15 @@ colors:
     cyan: '#81f2f5'
     white: '#f5f6f8'
 
-   #bright:
+  #bright:
     #black: '#1e1e1e'
-    #red: '#ff92d0'
-    #green: '#e0f880'
-    #yellow: '#fbdd8f'
-    #blue: '#93b8fe'
-    #magenta: '#aca3f9'
-    #cyan: '#bbf4f5'
-    #white: '#fbfbfc'
+    #red: '#ff5e9f'
+    #green: '#e6f997'
+    #yellow: '#fce3a3'
+    #blue: '#8fb3fc'
+    #magenta: '#a095fa'
+    #cyan: '#c0f9fa'
+    #white: '#fefefe'
 
 background_opacity: 0.97
 
