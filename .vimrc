@@ -35,9 +35,10 @@ autocmd FileType ipynb     setlocal cc=79
 autocmd FileType vim       setlocal cc=80
 autocmd FileType perl      setlocal cc=80
 autocmd FileType r         setlocal cc=80
+autocmd FileType r         setlocal shiftwidth=2 tabstop=2
 autocmd Filetype python    setlocal cc=79
+autocmd Filetype python    setlocal shiftwidth=4 tabstop=4
 autocmd Filetype yaml       setlocal cc=80
-highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 
 
 "Customize Colors==============================================================
@@ -49,6 +50,7 @@ highlight LineNr ctermfg=248 guifg=DarkGrey
 highlight Folded ctermbg=none
 highlight MatchParen cterm=bold 
 highlight Comment ctermfg=248
+highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 
 set showmatch
 
