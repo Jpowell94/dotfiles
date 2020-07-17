@@ -117,6 +117,7 @@ Plug 'tpope/vim-markdown'
 Plug 'scrooloose/nerdtree'
 
 Plug 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enabble_on_vim_startup = 1
 
 Plug 'scrooloose/nerdcommenter'
 
