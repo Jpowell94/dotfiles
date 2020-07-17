@@ -21,6 +21,8 @@ set updatetime=50
 
 set number
 
+set cursorline
+
 syntax on
 
 
@@ -53,6 +55,8 @@ highlight Folded ctermbg=none
 highlight MatchParen cterm=bold 
 highlight Comment ctermfg=248
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
+highlight CursorLine cterm=none 
+highlight cursorLineNr cterm=none  ctermfg=5
 
 set showmatch
 
