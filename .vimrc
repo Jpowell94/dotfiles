@@ -40,6 +40,8 @@ autocmd Filetype python    setlocal cc=79
 autocmd Filetype python    setlocal shiftwidth=4 tabstop=4
 autocmd Filetype yaml      setlocal cc=80
 
+"macros for R package development
+map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturnnaimportFromnaexport€ýa
 
 "Customize Colors==============================================================
 
