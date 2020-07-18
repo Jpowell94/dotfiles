@@ -25,6 +25,7 @@ set cursorline
 
 syntax on
 
+set showmatch
 
 "File type specific settings===================================================
 
@@ -57,8 +58,6 @@ highlight Comment ctermfg=248
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 highlight CursorLine cterm=none ctermbg=0
 highlight cursorLineNr cterm=none  ctermfg=5
-
-set showmatch
 
 set t_Co=256
 "if exists('+termguicolors')
