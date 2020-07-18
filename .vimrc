@@ -42,7 +42,7 @@ autocmd Filetype python    setlocal cc=79
 autocmd Filetype python    setlocal shiftwidth=4 tabstop=4
 autocmd Filetype yaml      setlocal cc=80
 
-"macros for R package development
+"macros for R package development; creates roxygen skeleton
 map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturnnaimportFromnaexport€ýa
 
 "Customize Colors==============================================================
@@ -55,7 +55,7 @@ highlight Folded ctermbg=none
 highlight MatchParen cterm=bold 
 highlight Comment ctermfg=248
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
-highlight CursorLine cterm=none 
+highlight CursorLine cterm=none ctermbg=0
 highlight cursorLineNr cterm=none  ctermfg=5
 
 set showmatch
