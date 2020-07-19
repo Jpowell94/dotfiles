@@ -5,6 +5,10 @@ font:
  normal:
    family: DelugiaCode NF
 
+ #bold:
+   #family: Hack
+      #style: Bold
+
  size: 12
 
  use_thin_strokes: true #cant tell if this is working.
