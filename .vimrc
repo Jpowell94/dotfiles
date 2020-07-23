@@ -46,6 +46,9 @@ autocmd Filetype yaml      setlocal cc=80
 "macros for R package development; creates roxygen skeleton
 map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturnnaimportFromnaexport€ýa
 
+map @b i```{lli
+
+map @d i---Vyotitle:output:	flexdashboard::flex_dashboard:po###Vyop
 "Customize Colors==============================================================
 
 highlight TablineFill ctermfg=0
