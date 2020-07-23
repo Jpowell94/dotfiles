@@ -38,9 +38,9 @@ autocmd FileType ipynb     setlocal cc=79
 autocmd FileType vim       setlocal cc=80
 autocmd FileType perl      setlocal cc=80
 autocmd FileType r         setlocal cc=80
-autocmd FileType r         setlocal shiftwidth=2 tabstop=2
+autocmd FileType r         setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd Filetype python    setlocal cc=79
-autocmd Filetype python    setlocal shiftwidth=4 tabstop=4
+autocmd Filetype python    setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd Filetype yaml      setlocal cc=80
 
 "macros for R package development; creates roxygen skeleton
@@ -78,8 +78,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-
-
 "Text, tab, and indent related=================================================
 
 " use <tab> for trigger completion
