@@ -61,6 +61,7 @@ highlight Comment ctermfg=248
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 highlight CursorLine cterm=none ctermbg=0
 highlight cursorLineNr cterm=none  ctermfg=5
+highlight Visual cterm=reverse
 
 set t_Co=256
 "if exists('+termguicolors')
