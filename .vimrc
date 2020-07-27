@@ -62,6 +62,7 @@ highlight ColorColumn ctermbg=242 guibg=DarkGrey
 highlight CursorLine cterm=none ctermbg=0
 highlight cursorLineNr cterm=none  ctermfg=5
 highlight Visual cterm=reverse
+highlight FloatermBorder ctermbg=5
 
 set t_Co=256
 "if exists('+termguicolors')
@@ -190,4 +191,7 @@ Plug 'morhetz/gruvbox'
 Plug 'lilydjwg/colorizer'
 
 Plug 'tpope/vim-commentary'
+
+Plug 'voldikss/vim-floaterm'
+let g:floaterm_keymap_toggle = '<F12>'
 call plug#end()
