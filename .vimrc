@@ -49,6 +49,9 @@ map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturn
 map @b i```{lli
 
 map @d i---Vyotitle:output:	flexdashboard::flex_dashboard:po###Vyop
+
+map @h i---Vyopkititle:author: Jesse Powelldate: "`r format(Sys.time(), '%d %B, %Y
+
 "Customize Colors==============================================================
 
 highlight TablineFill ctermfg=0
@@ -194,4 +197,6 @@ Plug 'tpope/vim-commentary'
 
 Plug 'voldikss/vim-floaterm'
 let g:floaterm_keymap_toggle = '<F12>'
+nnoremap <silent> <F9> :FloatermSend<CR>
+nnoremap <silent> <F7> :FloatermNew --position=bottom --height=0.25 --width=0.8 ipython<CR>
 call plug#end()
