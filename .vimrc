@@ -29,6 +29,8 @@ set showmatch
 
 set hlsearch
 
+set incsearch
+
 "File type specific settings===================================================
 
 "remove trailing whitespace from certain file types
