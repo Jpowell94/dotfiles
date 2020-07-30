@@ -27,6 +27,8 @@ syntax on
 
 set showmatch
 
+set hlsearch
+
 "File type specific settings===================================================
 
 "remove trailing whitespace from certain file types
@@ -66,6 +68,14 @@ highlight CursorLine cterm=none ctermbg=0
 highlight cursorLineNr cterm=none  ctermfg=5
 highlight Visual cterm=reverse
 highlight FloatermBorder ctermbg=5
+highlight Search cterm=reverse ctermbg=0 ctermfg=15
+highlight SignColumn ctermbg=none
+highlight GitGutterAdd ctermfg=0 ctermbg=121
+highlight GitGutterChange ctermfg=0 ctermbg=12
+highlight GitGutterDelete ctermfg=0 ctermbg=9
+highlight DiffAdd ctermfg=0 ctermbg=121
+highlight DiffChange ctermfg=0 ctermbg=12
+highlight DiffDelete ctermfg=0 ctermbg=9
 
 set t_Co=256
 "if exists('+termguicolors')
@@ -108,7 +118,8 @@ set tabstop=4
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
@@ -137,8 +148,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 
 Plug 'jistr/vim-nerdtree-tabs'
-
-Plug 'wincent/command-t'
 
 Plug 'nelstrom/vim-markdown-folding'
 
@@ -199,4 +208,18 @@ Plug 'voldikss/vim-floaterm'
 let g:floaterm_keymap_toggle = '<F12>'
 nnoremap <silent> <F9> :FloatermSend<CR>
 nnoremap <silent> <F7> :FloatermNew --position=bottom --height=0.25 --width=0.8 ipython<CR>
+
+Plug 'airblade/vim-gitgutter'
+let g:gitgutter_enabled = 1
+let g:gitgutter_signs = 1
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_signs_removed = '-'
+let g:gitgutter_signs_modified = '~'
+set signcolumn=yes
+
+Plug 'colepeters/spacemacs-theme.vim'
+
+Plug 'rakr/vim-one'
+
+Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
