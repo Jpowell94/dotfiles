@@ -47,7 +47,7 @@ autocmd Filetype python    setlocal cc=79
 autocmd Filetype python    setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd Filetype yaml      setlocal cc=80
 
-"macros for R package development; creates roxygen skeleton
+"macros for R package development and rmarkdown
 map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturnnaimportFromnaexport€ýa
 
 map @b i```{lli
@@ -121,7 +121,7 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#ale#enabled = 1
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
@@ -131,8 +131,6 @@ let g:airline_theme = 'minimalist'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 Plug 'tmux-plugins/vim-tmux'
-
-Plug 'powerline/powerline'
 
 Plug 'sheerun/vim-polyglot'
 
@@ -183,6 +181,10 @@ let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 Plug 'goerz/jupytext.vim'
+let g:jupytext_fmt = 'rmarkdown'
+let g:jupytext_print_debug_msgs = 1
+let g:jupytext_command = 'jupytext'
+let g:jupytext_enable = 1
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -216,7 +218,7 @@ let g:gitgutter_enabled = 1
 let g:gitgutter_signs = 1
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_signs_removed = '-'
-let g:gitgutter_signs_modified = '~'
+let g:gitgutter_signs_modified = '¿'
 set signcolumn=yes
 
 Plug 'colepeters/spacemacs-theme.vim'
