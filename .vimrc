@@ -46,6 +46,10 @@ autocmd FileType r         setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd Filetype python    setlocal cc=79
 autocmd Filetype python    setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd Filetype yaml      setlocal cc=80
+autocmd FileType cs        setlocal cc=80
+autocmd FileType cs        setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType javascript setlocal cc=80
+autocmd FileType sh        setlocal cc=80
 
 "macros for R package development and rmarkdown
 map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturnnaimportFromnaexport€ýa
@@ -113,6 +117,15 @@ nnoremap <C-P> :bprev<CR>
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
+"ctag language settings========================================================
+let g:tagbar_type_r = {
+    \ 'ctagstype' : 'r',
+    \ 'kinds'     : [
+        \ 'f:Functions',
+        \ 'g:GlobalVariables',
+        \ 'v:FunctionVariables',
+    \ ]
+\ }
 
 
 "Plugins=======================================================================
@@ -226,4 +239,8 @@ Plug 'colepeters/spacemacs-theme.vim'
 Plug 'rakr/vim-one'
 
 Plug 'dracula/vim',{'as':'dracula'}
+
+Plug 'sainnhe/gruvbox-material'
+
+Plug 'majutsushi/tagbar'
 call plug#end()

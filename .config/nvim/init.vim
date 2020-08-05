@@ -16,11 +16,13 @@ endif
   endif
 endif
 set background=dark
-colorscheme spacemacs-theme
-" colorscheme one
-" colorscheme gruvbox
+" colorscheme spacemacs-theme
+ " colorscheme one
+colorscheme gruvbox
 " colorscheme dracula
+" colorscheme gruvbox-material
+" let g:gruvbox_material_background = 'hard'
 
-" let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='hard'
 
 " let g:gruvbox_invert_selection='0'
