@@ -34,14 +34,11 @@ autocmd FileType javascript setlocal cc=80
 autocmd FileType sh        setlocal cc=80
 
 "macros for R package development and rmarkdown
-map @x i#''xVy9pkA @vhyjjpjjpjjpjjpjp/@atitlenadescriptionnaparamnareturnnaimportFromnaexport€ýa
+let @x = "i#\'Vyppppppppp10kA @titlejjA @descriptionjjA @paramjjA @returnjjA @importFromjA @export"
 
-map @b i```{lli
+let @b = "i```{}```"
 
-map @d i---Vyotitle:output:	flexdashboard::flex_dashboard:po###Vyop
-
-map @h i---Vyopkititle:author: Jesse Powelldate: "`r format(Sys.time(), '%d %B, %Y
-
+let @h = "i---title:author:date:---2kA Jesse PowelljA \"\`r format(Sys.time(), '%d %B, %Y')\`\""
 "Customize Colors==============================================================
 
 highlight TablineFill ctermfg=0
@@ -229,4 +226,7 @@ Plug 'dracula/vim',{'as':'dracula'}
 Plug 'sainnhe/gruvbox-material'
 
 Plug 'majutsushi/tagbar'
+
+Plug 'justinmk/vim-sneak'
+let g:sneak#label = 1
 call plug#end()
