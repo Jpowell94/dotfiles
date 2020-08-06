@@ -127,6 +127,10 @@ let g:tagbar_type_r = {
     \ ]
 \ }
 
+let g:tagbar_type_rmd = {
+          \   'ctagstype':'rmarkdown'
+          \ , 'kinds':['f:Functions', 'g:GlobalVariables', 'v:FunctionVariables']
+          \ }
 
 "Plugins=======================================================================
 
@@ -243,4 +247,7 @@ Plug 'dracula/vim',{'as':'dracula'}
 Plug 'sainnhe/gruvbox-material'
 
 Plug 'majutsushi/tagbar'
+
+Plug 'justinmk/vim-sneak'
+let g:sneak#label = 1
 call plug#end()
