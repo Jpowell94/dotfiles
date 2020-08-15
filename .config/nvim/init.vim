@@ -46,7 +46,7 @@ highlight Pmenu ctermfg=15 ctermbg=0 guibg=Black
 highlight PmenuSel ctermfg=0 ctermbg=15 guibg=White
 highlight LineNr ctermfg=248 guifg=DarkGrey  
 highlight Folded ctermfg=248 ctermbg=none
-highlight MatchParen cterm=bold 
+highlight MatchParen cterm=NONE,bold
 highlight Comment ctermfg=248
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 highlight CursorLine cterm=none ctermbg=0
