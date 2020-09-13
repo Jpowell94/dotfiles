@@ -1,6 +1,8 @@
 "Longer update times lead to a worse user experience (supposedly)
 set updatetime=50
 
+set shortmess=I "this disables the intro message
+
 set number
 
 set cursorline
