@@ -34,6 +34,8 @@ autocmd FileType cs        setlocal cc=80
 autocmd FileType cs        setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType javascript setlocal cc=80
 autocmd FileType sh        setlocal cc=80
+autocmd FileType fsharp    setlocal cc=80
+autocmd Filetype fsharp    setlocal shiftwidth=4 tabstop=4 expandtab
 
 "macros for R package development and rmarkdown
 let @x = "i#\'Vyppppppppp10kA @titlejjA @descriptionjjA @paramjjA @returnjjA @importFromjA @export"
@@ -71,15 +73,15 @@ set t_Co=256
   "set termguicolors
 "endif
 
-if (empty($TMUX))
- if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
+ "if (empty($TMUX))
+  "if (has("nvim"))
+   "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+   "endif
 
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+  " if (has("termguicolors"))
+    " set termguicolors
+  " endif
+" endif
 "Text, tab, and indent related=================================================
 
 " use <tab> for trigger completion
