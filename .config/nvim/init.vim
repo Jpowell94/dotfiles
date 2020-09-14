@@ -233,4 +233,10 @@ Plug 'majutsushi/tagbar'
 
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
+
+Plug 'vimwiki/vimwiki'
+let g:vimwiki_list = [{'path':'~/vimwiki'}]
+let mapleader=" "
+
+Plug 'gilgigilgil/anderson.vim'
 call plug#end()
