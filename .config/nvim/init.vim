@@ -5,7 +5,7 @@ set shortmess=I "this disables the intro message
 
 set number
 
-set cursorline
+"set cursorline
 
 syntax on
 
@@ -51,10 +51,10 @@ highlight PmenuSel ctermfg=0 ctermbg=15 guibg=White
 highlight LineNr ctermfg=248 guifg=DarkGrey  
 highlight Folded ctermfg=248 ctermbg=none
 highlight MatchParen cterm=NONE,bold
-highlight Comment ctermfg=248
+highlight Comment ctermfg=215
 highlight ColorColumn ctermbg=242 guibg=DarkGrey 
 highlight CursorLine cterm=none ctermbg=0
-highlight cursorLineNr cterm=none  ctermfg=5
+highlight cursorLineNr cterm=none  ctermfg=15
 highlight Visual cterm=reverse
 highlight FloatermBorder ctermbg=5
 highlight Search cterm=reverse ctermbg=0 ctermfg=15
@@ -65,6 +65,17 @@ highlight GitGutterDelete ctermfg=0 ctermbg=9
 highlight DiffAdd ctermfg=0 ctermbg=121
 highlight DiffChange ctermfg=0 ctermbg=12
 highlight DiffDelete ctermfg=0 ctermbg=9
+highlight statement ctermfg=11
+highlight Operator ctermfg=6
+highlight constant ctermfg=2
+highlight Preproc ctermfg=6
+highlight Function ctermfg=11
+highlight Identifier ctermfg=6
+highlight Type ctermfg=6
+highlight Title ctermfg=12
+autocmd VimEnter,BufWinEnter * syn match parens /[(){}]/ | hi parens ctermfg=6
+autocmd VimEnter,BufEnter  * syn match arrow /[<-]/ | hi arrow ctermfg=6
+
 
 set t_Co=256
 "if exists('+termguicolors')
@@ -152,6 +163,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'nelstrom/vim-markdown-folding'
 
 Plug 'jalvesaq/Nvim-R'
+let R_assign = 0
 
 Plug 'gaalcaras/ncm-R'
 
@@ -168,11 +180,11 @@ let g:minimap_highlight='Visual'
 
 Plug 'chrisbra/csv.vim'
 
-Plug 'kien/rainbow_parentheses.vim'
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" Plug 'kien/rainbow_parentheses.vim'
+"  au VimEnter * RainbowParenthesesToggle
+"  au Syntax * RainbowParenthesesLoadRound
+"  au Syntax * RainbowParenthesesLoadSquare
+"  au Syntax * RainbowParenthesesLoadBraces
 
 Plug 'jpalardy/vim-slime'
 let g:slime_target = "tmux"

@@ -15,18 +15,18 @@ font:
 
 colors:
   primary:
-    background: '#12111e'
-    foreground: '#dfe2e8'
+    background: '#181818'
+    foreground: '#e4e4ef'
 
   normal:
-    black: '#1e1e1e'
-    red: '#ff6c6b'
-    green: '#dbf76a'
-    yellow: '#fad77b'
-    blue: '#7ba6fb'
-    magenta: '#8f82f9'
-    cyan: '#81f2f5'
-    white: '#f5f6f8'
+    black: '#000000'
+    red: '#ff4f58'
+    green: '#73c936'
+    yellow: '#ffdd33'
+    blue: '#96a6c8'
+    magenta: '#9e95c7'
+    cyan: '#95a99f'
+    white: '#ffffff'
 
   #bright:
     #black: '#1e1e1e'
@@ -38,7 +38,7 @@ colors:
     #cyan: '#c0f9fa'
     #white: '#fefefe'
 
-background_opacity: 0.97
+background_opacity: 1.00
 
 window:
   decorations: none
