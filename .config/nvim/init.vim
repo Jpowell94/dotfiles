@@ -14,6 +14,8 @@ set showmatch
 set hlsearch
 
 set incsearch
+set ignorecase
+set smartcase
 
 "File type specific settings===================================================
 
