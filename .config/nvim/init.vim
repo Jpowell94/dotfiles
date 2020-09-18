@@ -72,9 +72,10 @@ highlight Operator ctermfg=6
 highlight constant ctermfg=2
 highlight Preproc ctermfg=6
 highlight Function ctermfg=11
-highlight Identifier ctermfg=6
+highlight Identifier ctermfg=12
 highlight Type ctermfg=6
 highlight Title ctermfg=12
+highlight Conceal ctermbg=234 ctermfg=8
 autocmd VimEnter,BufWinEnter * syn match parens /[(){}]/ | hi parens ctermfg=6
 autocmd VimEnter,BufEnter  * syn match arrow /[<-]/ | hi arrow ctermfg=6
 
@@ -151,8 +152,8 @@ Plug 'tpope/vim-markdown'
 
 Plug 'scrooloose/nerdtree'
 
-Plug 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup = 1
+Plug 'Yggdroot/indentline'
+let g:indentLine_setColors = 0
 
 Plug 'scrooloose/nerdcommenter'
 
