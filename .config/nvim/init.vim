@@ -1,7 +1,13 @@
+"    (_)___  (_) /__   __(_)___ ___ 
+"   / / __ \/ / __/ | / / / __ `__ \
+"  / / / / / / /__| |/ / / / / / / /
+" /_/_/ /_/_/\__(_)___/_/_/ /_/ /_/ 
+
 "Longer update times lead to a worse user experience (supposedly)
 set updatetime=50
 
 set shortmess=I "this disables the intro message
+set shortmess=at "this helps opening files externally that have long paths
 
 set number
 
@@ -75,8 +81,8 @@ highlight Function ctermfg=11
 highlight Identifier ctermfg=12
 highlight Type ctermfg=6
 highlight Title ctermfg=12
-highlight Conceal ctermbg=234 ctermfg=8
-autocmd VimEnter,BufWinEnter * syn match parens /[(){}]/ | hi parens ctermfg=6
+highlight Conceal ctermbg=234 ctermfg=237
+" autocmd VimEnter,BufWinEnter * syn match parens /[(){}]/ | hi parens ctermfg=6
 autocmd VimEnter,BufEnter  * syn match arrow /[<-]/ | hi arrow ctermfg=6
 
 
@@ -188,6 +194,11 @@ Plug 'chrisbra/csv.vim'
 "  au Syntax * RainbowParenthesesLoadRound
 "  au Syntax * RainbowParenthesesLoadSquare
 "  au Syntax * RainbowParenthesesLoadBraces
+
+Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
+let g:rainbow_conf = {'ctermfgs': ['6', '4', '5', '10', '14']}
+" let g:rainbow_conf = {'separately': {'RMarkdown': {'parentheses_options': 'containedin=markdownCode contained'}}}
 
 Plug 'jpalardy/vim-slime'
 let g:slime_target = "tmux"

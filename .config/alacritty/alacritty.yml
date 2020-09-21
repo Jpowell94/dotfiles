@@ -14,6 +14,7 @@ font:
  use_thin_strokes: true #cant tell if this is working.
 
 colors:
+#Gruber Darker
   primary:
     background: '#181818'
     foreground: '#e4e4ef'
@@ -28,15 +29,20 @@ colors:
     cyan: '#95a99f'
     white: '#ffffff'
 
-  #bright:
-    #black: '#1e1e1e'
-    #red: '#ff5e9f'
-    #green: '#e6f997'
-    #yellow: '#fce3a3'
-    #blue: '#8fb3fc'
-    #magenta: '#a095fa'
-    #cyan: '#c0f9fa'
-    #white: '#fefefe'
+# Custom Theme
+  # primary:
+  #   background: '#12111e'
+  #   foreground: '#f5f5ec'
+
+  # normal:
+  #   black: '#1e1e1e'
+  #   red: '#fb3283'
+  #   green: '#dbf76a'
+  #   yellow: '#fad77b'
+  #   blue: '#7ba6fb'
+  #   magenta: '#8f82f9'
+  #   cyan: '#81f2f5'
+  #   white: '#fcfcf9'
 
 background_opacity: 1.00
 
