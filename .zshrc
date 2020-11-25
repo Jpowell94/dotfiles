@@ -172,7 +172,19 @@ export PATH=$PATH:~/bin
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-export PATH=$PATH:~/.emacs.d/bin
+export PATH="$PATH:~/.emacs.d/bin"
+
+export PATH="$PATH:/usr/local/smlnj/bin"
+
+export DENO_INSTALL="/Users/jesserussellpowell/.deno"
+
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+export PATH=$PATH:"/usr/local/bin/gst"
+
+alias st="/usr/local/bin/gst"
+
+alias lsd="/usr/local/bin/exa"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 #unalias imgcat

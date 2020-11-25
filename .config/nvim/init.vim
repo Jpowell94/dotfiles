@@ -23,6 +23,10 @@ set incsearch
 set ignorecase
 set smartcase
 
+set splitbelow
+
+command! Scratch lua require'tools'.makeScratch()
+
 "File type specific settings===================================================
 
 "remove trailing whitespace from certain file types
@@ -44,6 +48,10 @@ autocmd FileType javascript setlocal cc=80
 autocmd FileType sh        setlocal cc=80
 autocmd FileType fsharp    setlocal cc=80
 autocmd Filetype fsharp    setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd Filetype cpp       setlocal cc=80
+
+"comment behavior
+autocmd VimEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "macros for R package development and rmarkdown
 let @x = "i#\'Vyppppppppp10kA @titlejjA @descriptionjjA @paramjjA @returnjjA @importFromjA @export"
@@ -60,7 +68,7 @@ highlight LineNr ctermfg=248 guifg=DarkGrey
 highlight Folded ctermfg=248 ctermbg=none
 highlight MatchParen cterm=NONE,bold
 highlight Comment ctermfg=215
-highlight ColorColumn ctermbg=242 guibg=DarkGrey 
+highlight ColorColumn ctermbg=242 guibg=DarkGrey
 highlight CursorLine cterm=none ctermbg=0
 highlight cursorLineNr cterm=none  ctermfg=15
 highlight Visual cterm=reverse
@@ -75,16 +83,21 @@ highlight DiffChange ctermfg=0 ctermbg=12
 highlight DiffDelete ctermfg=0 ctermbg=9
 highlight statement ctermfg=11
 highlight Operator ctermfg=6
-highlight constant ctermfg=2
+highlight Constant ctermfg=2
 highlight Preproc ctermfg=6
-highlight Function ctermfg=11
+highlight Function ctermfg=12
+highlight Keyword ctermfg=6
 highlight Identifier ctermfg=12
-highlight Type ctermfg=6
+highlight Type ctermfg=11
 highlight Title ctermfg=12
 highlight Conceal ctermbg=234 ctermfg=237
+highlight Special ctermfg=2
+highlight Typedef ctermfg=6
+highlight Conditional ctermfg=11
+highlight Repeat      ctermfg=11
 " autocmd VimEnter,BufWinEnter * syn match parens /[(){}]/ | hi parens ctermfg=6
-autocmd VimEnter,BufEnter  * syn match arrow /[<-]/ | hi arrow ctermfg=6
-
+autocmd VimEnter,BufEnter * syn match arrow /[<-]/ | hi arrow ctermfg=6
+autocmd VimEnter,BufEnter * syn match readout /[>>]/ | hi readout ctermfg=6
 
 set t_Co=256
 "if exists('+termguicolors')
@@ -113,7 +126,7 @@ endfunction
 
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<Tab>" : coc#refresh()
 
-:set hidden
+" set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
@@ -141,7 +154,7 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline'
 let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
@@ -173,6 +186,10 @@ Plug 'nelstrom/vim-markdown-folding'
 
 Plug 'jalvesaq/Nvim-R'
 let R_assign = 0
+let R_nvimpager = "horizontal"
+let R_hi_fun_paren = 1
+" let R_help_h = 9
+" let R_editor_h = 10
 
 Plug 'gaalcaras/ncm-R'
 
@@ -197,7 +214,7 @@ Plug 'chrisbra/csv.vim'
 
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
-let g:rainbow_conf = {'ctermfgs': ['6', '4', '5', '10', '14']}
+let g:rainbow_conf = {'ctermfgs': ['6', '4', '5', '71', '4']}
 " let g:rainbow_conf = {'separately': {'RMarkdown': {'parentheses_options': 'containedin=markdownCode contained'}}}
 
 Plug 'jpalardy/vim-slime'
@@ -214,7 +231,7 @@ let g:jupytext_enable = 1
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'ap/vim-buftabline'
+" Plug 'ap/vim-buftabline'
 
 Plug 'dense-analysis/ale'
 let g:ale_sign_column_always = 1
@@ -261,8 +278,12 @@ Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 
 Plug 'vimwiki/vimwiki'
-let g:vimwiki_list = [{'path':'~/vimwiki'}]
+let g:vimwiki_list = [{'path':'~/vimwiki', 'syntax': 'markdown', 'ext': '.wiki'}]
+let g:vimwiki_ext2syntax = {'.wiki.': 'markdown'}
+let g:vimwiki_folding = 'syntax'
 let mapleader=" "
 
 Plug 'gilgigilgil/anderson.vim'
 call plug#end()
+
+Plug 'octol/vim-cpp-enhanced-highlight'

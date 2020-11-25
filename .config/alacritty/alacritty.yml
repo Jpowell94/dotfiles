@@ -5,9 +5,9 @@ font:
  normal:
    family: DelugiaCode NF
 
- #bold:
-   #family: Hack
-      #style: Bold
+ # bold:
+ #   family: DelugiaCode NF
+      # style: Bold
 
  size: 12
 
@@ -44,7 +44,7 @@ colors:
   #   cyan: '#81f2f5'
   #   white: '#fcfcf9'
 
-background_opacity: 1.00
-
 window:
   decorations: none
+
+background_opacity: 1.00

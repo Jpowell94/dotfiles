@@ -1,9 +1,11 @@
-options(radian.color_scheme = "colorful")
+options(radian.color_scheme = "native")
 
 # either '"emacs"' or '"vi"'
 options(radian.editing_mode = "vi")
 
-options(radian.auto_match = TRUE)
+options(radian.auto_match = FALSE)
+
+options(radian.insert_new_line = FALSE)
 
 # highlight matching bracket
 options(radian.highlight_matching_bracket = TRUE)
